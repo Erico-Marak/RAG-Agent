@@ -1,68 +1,112 @@
-# 🤖 RAG Agent
-A Retrieval-Augmented Generation (RAG) based AI Agent built using **n8n**, integrating **OpenAI**, **Supabase Vector Store**, and **PostgreSQL memory** to enable intelligent, context-aware conversations.
-## 🚀 Features
-- 🔍 Semantic search using vector embeddings  
-- 🧠 Context-aware responses with chat memory  
-- 🔗 Integration with OpenAI LLMs  
-- 📂 Automated document ingestion pipeline  
-- ⚡ Workflow orchestration using n8n  
+# 🤖 Retrieval-Augmented Generation (RAG) Agent
+An AI-powered **RAG (Retrieval-Augmented Generation) Agent** built using **n8n**, integrating **OpenAI**, **Supabase (pgvector)**, and **PostgreSQL** to deliver accurate, context-aware responses from external knowledge sources.
+## 🚀 Overview
+This project implements an end-to-end **RAG pipeline** that enhances Large Language Model (LLM) responses by retrieving relevant context from a vector database.
+Instead of relying only on model memory, the system:
+- Retrieves semantically relevant documents  
+- Injects them into the prompt  
+- Generates more accurate and grounded responses  
 ## 🧩 Architecture
 ### 🔄 Workflow Overview
-![RAG Workflow]([assets/rag-workflow.png](https://github.com/Erico-Marak/RAG-Agent/blob/b6b2ebe9317fd1f8a0b209e78fcf6646e65c0071/rag.png))
+![RAG Workflow](rag.png)
 ### 🧠 Pipeline Flow
 
-User Query  
-↓  
-Embedding Generation (OpenAI)  
-↓  
-Vector Search (Supabase)  
-↓  
-Relevant Documents Retrieved  
-↓  
-LLM (Context + Query)  
-↓  
-Final Response
+User Query → Embeddings → Vector Search → Context Retrieval → LLM → Response
 
 ## 🛠️ Tech Stack
 - **Workflow Automation:** n8n  
-- **LLM & Embeddings:** OpenAI  
-- **Vector Database:** Supabase  
+- **LLM & Embeddings:** OpenAI API  
+- **Vector Database:** Supabase (pgvector)  
 - **Memory Storage:** PostgreSQL  
-- **Data Processing:** Custom pipelines  
-## 📌 Use Cases
-- AI-powered document search  
-- Knowledge base assistants  
-- Chatbots with memory  
-- Semantic search systems  
-## ⚙️ Setup
-1. Import the workflow:
+- **Data Handling:** Custom ingestion pipelines  
+## ⚙️ Features
+- 🔍 Semantic search using vector embeddings  
+- 📄 Automated document ingestion & chunking  
+- 🧠 Context-aware response generation (RAG)  
+- 💬 Multi-turn conversation with memory  
+- 🔄 End-to-end workflow automation using n8n  
+## 📂 How It Works
+1. **Data Ingestion**
+   - Documents are uploaded and split into chunks  
+   - Embeddings are generated using OpenAI  
+2. **Storage**
+   - Embeddings stored in Supabase vector database  
+3. **Query Processing**
+   - User query converted into embedding  
+   - Relevant documents retrieved via similarity search  
+4. **Response Generation**
+   - Retrieved context + query sent to LLM  
+   - Final response generated  
+## ⚙️ Setup & Usage
+1. Clone the repository:
 ## 🛠️ Tech Stack
 - **Workflow Automation:** n8n  
-- **LLM & Embeddings:** OpenAI  
-- **Vector Database:** Supabase  
+- **LLM & Embeddings:** OpenAI API  
+- **Vector Database:** Supabase (pgvector)  
 - **Memory Storage:** PostgreSQL  
-- **Data Processing:** Custom pipelines  
-## 📌 Use Cases
-- AI-powered document search  
-- Knowledge base assistants  
-- Chatbots with memory  
-- Semantic search systems  
-## ⚙️ Setup
-1. Import the workflow:
+- **Data Handling:** Custom ingestion pipelines  
+## ⚙️ Features
+- 🔍 Semantic search using vector embeddings  
+- 📄 Automated document ingestion & chunking  
+- 🧠 Context-aware response generation (RAG)  
+- 💬 Multi-turn conversation with memory  
+- 🔄 End-to-end workflow automation using n8n  
+## 📂 How It Works
+
+1. **Data Ingestion**
+   - Documents are uploaded and split into chunks  
+   - Embeddings are generated using OpenAI  
+2. **Storage**
+   - Embeddings stored in Supabase vector database  
+3. **Query Processing**
+   - User query converted into embedding  
+   - Relevant documents retrieved via similarity search  
+4. **Response Generation**
+   - Retrieved context + query sent to LLM  
+   - Final response generated  
+## ⚙️ Setup & Usage
+1. Clone the repository:
+
+git clone https://github.com/Erico-Marak/RAG-Agent.git
+
+2. Import the workflow into n8n:
 
 Rag Agent.json
 
-2. Configure:
+3. Configure environment:
 - OpenAI API Key  
 - Supabase credentials  
 - PostgreSQL connection  
-3. Run the workflow in n8n  
-## 📬 Future Improvements
-- Add UI for user interaction  
-- Improve retrieval accuracy  
+4. Run the workflow in n8n  
+## 📌 Use Cases
+- AI-powered document Q&A  
+- Knowledge base assistants  
+- Chatbots with memory  
+- Internal enterprise search systems  
+## 🚧 Future Improvements
+- Add frontend UI for interaction  
+- Improve retrieval with hybrid search  
 - Support multiple data sources  
-## 👨‍💻 Author
-**Erico N Marak**
+- Optimize latency and scalability  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
