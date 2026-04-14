@@ -8,7 +8,7 @@ A Retrieval-Augmented Generation (RAG) based AI Agent built using **n8n**, integ
 - ⚡ Workflow orchestration using n8n  
 ## 🧩 Architecture
 ### 🔄 Workflow Overview
-![RAG Workflow](assets/rag-workflow.png)
+![RAG Workflow]([assets/rag-workflow.png](https://github.com/Erico-Marak/RAG-Agent/blob/b6b2ebe9317fd1f8a0b209e78fcf6646e65c0071/rag.png))
 ### 🧠 Pipeline Flow
 
 User Query  
